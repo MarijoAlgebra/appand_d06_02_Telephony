@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.bubulescu.telephony.MainActivity">
+
+
+    <EditText
+        android:id="@+id/etBroj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Unesi tel. broj"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/etPoruka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Unesi SMS poruku"
+        android:inputType="textMultiLine"
+        android:lines="8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPrepareSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pripremi SMS" />
+
+        <Button
+            android:id="@+id/btnSendSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pošalji SMS" />
+
+        <Button
+            android:id="@+id/btnDial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dial" />
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call" />
+
+    </LinearLayout>
+
+</LinearLayout>
