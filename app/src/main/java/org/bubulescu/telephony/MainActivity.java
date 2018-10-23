@@ -55,17 +55,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (numberEntered() && textEntered()) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.putExtra("address", etNumber.getText().toString());
-                    intent.putExtra("sms_body", etSMStext.getText().toString());
-                    intent.setType("vnd.android-dir/mms-sms");
-                    try {
-                        startActivity(intent);
-                        
-                    } catch (Exception e) {
-                        Toast.makeText(MainActivity.this, "Nema native SMS aplikacije..", Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
-                    }
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", phoneNumber, null));
+                    intent.putExtra("sms_body", smsMessage);
+
+                    startActivity(intent);
                 }
             }
         });
